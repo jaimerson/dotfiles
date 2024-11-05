@@ -5,3 +5,14 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
 	editor = vim
+
+[includeIf "gitdir:~/workspace/toptal/**"]
+  path = ~/workspace/toptal/.gitconfig
+
+[alias]
+  s = status
+  c = commit -m
+  a = add
+  d = diff
+  ds = diff --staged
+	this-branch = rev-parse --abbrev-ref HEAD
